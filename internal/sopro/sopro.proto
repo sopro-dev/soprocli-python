@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+// option go_package = "github.com/sopro-dev/sopro-proto/pkg/sopropb;sopropb";
+
+package sopro;
+
+message HealthRequest {}
+message HealthResponse { string message = 1; }
+
+service SoproService {
+  rpc PingPong(HealthRequest) returns (HealthResponse) {};
+}
