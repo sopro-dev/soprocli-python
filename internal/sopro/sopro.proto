@@ -2,7 +2,7 @@ syntax = "proto3";
 
 // option go_package = "github.com/sopro-dev/sopro-proto/pkg/sopropb;sopropb";
 
-package sopro;
+package sopropb;
 
 message HealthRequest {}
 message HealthResponse { string message = 1; }

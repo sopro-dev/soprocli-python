@@ -13,17 +13,17 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0bsopro.proto\x12\x05sopro\"\x0f\n\rHealthRequest\"!\n\x0eHealthResponse\x12\x0f\n\x07message\x18\x01 \x01(\t2I\n\x0cSoproService\x12\x39\n\x08PingPong\x12\x14.sopro.HealthRequest\x1a\x15.sopro.HealthResponse\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0bsopro.proto\x12\x07sopropb\"\x0f\n\rHealthRequest\"!\n\x0eHealthResponse\x12\x0f\n\x07message\x18\x01 \x01(\t2M\n\x0cSoproService\x12=\n\x08PingPong\x12\x16.sopropb.HealthRequest\x1a\x17.sopropb.HealthResponse\"\x00\x62\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sopro_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  _HEALTHREQUEST._serialized_start=22
-  _HEALTHREQUEST._serialized_end=37
-  _HEALTHRESPONSE._serialized_start=39
-  _HEALTHRESPONSE._serialized_end=72
-  _SOPROSERVICE._serialized_start=74
-  _SOPROSERVICE._serialized_end=147
+  _HEALTHREQUEST._serialized_start=24
+  _HEALTHREQUEST._serialized_end=39
+  _HEALTHRESPONSE._serialized_start=41
+  _HEALTHRESPONSE._serialized_end=74
+  _SOPROSERVICE._serialized_start=76
+  _SOPROSERVICE._serialized_end=153
 # @@protoc_insertion_point(module_scope)

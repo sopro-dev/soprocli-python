@@ -15,7 +15,7 @@ class SoproServiceStub(object):
             channel: A grpc.Channel.
         """
         self.PingPong = channel.unary_unary(
-                '/sopro.SoproService/PingPong',
+                '/sopropb.SoproService/PingPong',
                 request_serializer=sopro__pb2.HealthRequest.SerializeToString,
                 response_deserializer=sopro__pb2.HealthResponse.FromString,
                 )
@@ -40,7 +40,7 @@ def add_SoproServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'sopro.SoproService', rpc_method_handlers)
+            'sopropb.SoproService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -59,7 +59,7 @@ class SoproService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/sopro.SoproService/PingPong',
+        return grpc.experimental.unary_unary(request, target, '/sopropb.SoproService/PingPong',
             sopro__pb2.HealthRequest.SerializeToString,
             sopro__pb2.HealthResponse.FromString,
             options, channel_credentials,
